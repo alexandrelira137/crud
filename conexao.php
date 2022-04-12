@@ -10,6 +10,7 @@
     } else
         echo "Erro de conexão com o servidor";
 
-    
-
+    function mensagem($texto, $tipo) {
+        echo "<div class='alert alert-$tipo' role='alert'>$texto</div>";
+    }
 ?>

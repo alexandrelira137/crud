@@ -39,9 +39,9 @@
                         <label for="sexo" class="form-label">Sexo</label>
                         <select class="form-select" aria-label="Default select example" name="sexo">
                             <option selected >Selecione seu sexo</option>
-                            <option value="1">Masculino</option>
-                            <option value="2">Feminino</option>
-                            <option value="3">Outro</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Feminino</option>
+                            <option value="O">Outro</option>
                         </select>
                     </div>
                     <div class="mb-3">

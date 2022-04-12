@@ -32,11 +32,14 @@
                 VALUES ('$nome','$profissao','$raca','$data_nascimento','$sexo','$sus','$cpf','$senha')";
             
                 if (mysqli_query($conn, $sql)) {
-                    echo "$nome cadastrado com sucesso!";
+                    mensagem("$nome cadastrado com sucesso!", 'success');
                 } else 
-                    echo "$nome não foi cadastrado!";
+                    mensagem("$nome NÂO cadastrado(a)", 'danger');
             
             ?>
+
+            <a href="index.php" class="btn btn-primary">Voltar</a>
+
         </div>
     </div>
 
