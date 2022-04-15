@@ -17,7 +17,7 @@
     <?php
         include "conexao.php";
         $id = $_GET['id'] ?? '';
-        $sql = "SELECT * FROM pacientes WHERE id_paciente = $id";
+        $sql = "SELECT * FROM paciente WHERE id_paciente = $id";
 
         $dados = mysqli_query($conn, $sql);
 
@@ -68,6 +68,7 @@
                     </div>
                     <div class="mb-3">
                         <input class="btn btn-primary" type="submit" value="Salvar alterações">
+                        <input type="hidden" name="id" value="<?php echo $linha['id_paciente']; ?>">
                     </div>
                 </form>
                 <a href="index.php" class="btn btn-dark">Voltar para o início</a>

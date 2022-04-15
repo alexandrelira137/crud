@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Alteração de cadastro</title>
+    <title>Exclusão de cadastro</title>
 </head>
 
 <body>
@@ -21,23 +21,15 @@
 
                 $id = $_POST['id'];
                 $nome = $_POST['nome'];
-                $profissao = $_POST['profissao'];
-                $raca = $_POST['raca'];
-                $data_nascimento = $_POST['data_nascimento'];
-                $sexo = $_POST['sexo'];
-                $sus = $_POST['sus'];
-                $cpf = $_POST['cpf'];
-                $senha = $_POST['senha'];
 
                 //$sql = "INSERT INTO `paciente`(`nome`, `profissao`, `raca`, `data_nascimento`, `sexo`, `sus`, `cpf`, `senha`) 
                 //VALUES ('$nome','$profissao','$raca','$data_nascimento','$sexo','$sus','$cpf','$senha')";
-                $sql = "UPDATE `paciente` set `nome` = '$nome', `profissao` = '$profissao', `raca` = '$raca',
-                 `data_nascimento` = '$data_nascimento', `sexo` = '$sexo', `sus` = '$sus', `cpf` = '$cpf', `senha` = '$senha' WHERE id_paciente = $id";
+                $sql = "DELETE from `paciente` WHERE id_paciente = $id";
 
                 if (mysqli_query($conn, $sql)) {
-                    mensagem("$nome Alterado(a) com sucesso!", 'success');
+                    mensagem("$nome excluído(a) com sucesso!", 'success');
                 } else 
-                    mensagem("$nome NÂO alterado(a)", 'danger');
+                    mensagem("$nome NÂO excluído(a)", 'danger');
             
             ?>
 

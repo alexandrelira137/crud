@@ -28,9 +28,9 @@
                 $cpf = $_POST['cpf'];
                 $senha = $_POST['senha'];
 
-                $sql = "INSERT INTO `pacientes`(`nome`, `profissao`, `raca`, `data_nascimento`, `sexo`, `sus`, `cpf`, `senha`) 
+                $sql = "INSERT INTO `paciente`(`nome`, `profissao`, `raca`, `data_nascimento`, `sexo`, `sus`, `cpf`, `senha`) 
                 VALUES ('$nome','$profissao','$raca','$data_nascimento','$sexo','$sus','$cpf','$senha')";
-            
+
                 if (mysqli_query($conn, $sql)) {
                     mensagem("$nome cadastrado com sucesso!", 'success');
                 } else 
